@@ -1,3 +1,5 @@
+
+
 module Rackapp
   
   class Application
@@ -5,13 +7,10 @@ module Rackapp
     STATUS = 200
     HEADERS = {'Content-Type' => 'text/html'}
   
-    def self.call(env)
-      [STATUS, HEADERS, body]
+    def call(env)
+      [STATUS, HEADERS, []]
     end
-  
-    def self.body
-      ["Hey there"]
-    end
+    
   end
   
 end
